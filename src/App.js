@@ -5,7 +5,7 @@ import './App.css';
 import Container from "react-bootstrap/Container";
 import { Navbar } from "react-bootstrap/esm";
 import { FirebaseConfig } from "./config/Config";
-
+import { initializeApp } from "firebase/app";
 function App() {
   return (
     <div className="App">
