@@ -6,7 +6,7 @@ import "react-bootstrap/Navbar"
 import "react-bootstrap/Nav"
 import './App.css';
 import Container from "react-bootstrap/Container";
-import { Navbar } from "react-bootstrap/esm";
+import { Nav, Navbar } from "react-bootstrap/esm";
 
 function App() {
   const FBapp = initializeApp(FirebaseConfig);
@@ -14,7 +14,12 @@ function App() {
     <div className="App">
       <Navbar>
         <Container>
-          <Navbar.Brand.App>App</Navbar.Brand.App>
+          <Navbar.Brand>App</Navbar.Brand>
+          <Nav>
+            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/about">About</Nav.Link>
+            <Nav.Link href="/contact">Contact</Nav.Link>
+            </Nav>
         </Container>
       </Navbar>
         <h1>React App</h1>
