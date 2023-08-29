@@ -14,6 +14,7 @@ function App() {
     <div className="App">
       <Navbar>
         <Container>
+          <Navbar.Brand.App>App</Navbar.Brand.App>
         </Container>
       </Navbar>
         <h1>React App</h1>
