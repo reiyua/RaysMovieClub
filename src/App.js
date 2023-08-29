@@ -9,7 +9,7 @@ import Container from "react-bootstrap/Container";
 import { Navbar } from "react-bootstrap/esm";
 
 function App() {
-  const FBapp = initializeApp(firebaseConfig);
+  const FBapp = initializeApp(FirebaseConfig);
   return (
     <div className="App">
       <Navbar>
