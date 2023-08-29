@@ -4,6 +4,7 @@ import "react-bootstrap/Nav"
 import './App.css';
 import Container from "react-bootstrap/Container";
 import { Navbar } from "react-bootstrap/esm";
+import { FirebaseConfig } from "./config/Config";
 
 function App() {
   return (
