@@ -22,7 +22,7 @@ function App() {
             </Nav>
         </Container>
       </Navbar>
-        <h1>React App - Test Change</h1>
+        <h1>React App</h1>
         </div>
       );
   }
