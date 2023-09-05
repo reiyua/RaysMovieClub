@@ -1,12 +1,14 @@
 import { FirebaseConfig } from "./config/Config"
 import { initializeApp } from "firebase/app"
 import { Routes, Route } from "react-router-dom"
+import { useState } from "react"
 
 import { Header } from "./components/Header"
 import './App.css'
 import { About } from "./pages/About"
 import { Home } from "./pages/Home"
 import { Contact } from "./pages/Contact"
+
 
 function App() {
   const FBapp = initializeApp(FirebaseConfig)
@@ -25,6 +27,8 @@ const AuthNavItems = [
     { label: "Contact", link: "/contact" },
     { label: "Log out", link: "/signout"}
 ] 
+
+/// application states
 
   const saySomething = ( word ) => {
     alert( word )
