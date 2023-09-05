@@ -29,13 +29,15 @@ const AuthNavItems = [
 ] 
 
 /// application states
+const [nav, setNav ] = useState( navItems )
+
 
   const saySomething = ( word ) => {
     alert( word )
   }
   return (
     <div className="App">
-      <Header />
+      <Header items={nav}/>
       <Routes>
         <Route path="/" element={ <Home greeting="Hey you're at home!" /> } />
         <Route path="/about" element={ <About greeting="Hey you, this is about page!" handler={saySomething} /> } />
