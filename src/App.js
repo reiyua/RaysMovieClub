@@ -8,6 +8,7 @@ import './App.css'
 import { About } from "./pages/About"
 import { Home } from "./pages/Home"
 import { Contact } from "./pages/Contact"
+import { Signup } from "./pages/Signup"
 
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
     { label: "Log in", link: "/signin" },
   ]
 // navigation for authenticated user
-const AuthNavItems = [
+const AuthnavItems = [
     { label: "Home", link: "/" },
     { label: "About", link: "/about" },
     { label: "Contact", link: "/contact" },
@@ -29,7 +30,7 @@ const AuthNavItems = [
 ] 
 
 /// application states
-const [nav, setNav ] = useState( AuthNavItems )
+const [nav, setNav ] = useState( navItems )
 
 
   const saySomething = ( word ) => {
@@ -42,6 +43,7 @@ const [nav, setNav ] = useState( AuthNavItems )
         <Route path="/" element={ <Home greeting="Hey you're at home!" /> } />
         <Route path="/about" element={ <About greeting="Hey you, this is about page!" handler={saySomething} /> } />
         <Route path="/contact" element={ <Contact greeting="Hey you, this is contact page!" /> } />
+        <Route path="/signup" element={ <Signup/> } />
       </Routes>
     </div>
   );
