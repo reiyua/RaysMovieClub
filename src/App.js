@@ -6,6 +6,7 @@ import "react-bootstrap/Container"
 import "react-bootstrap/Navbar"
 import "react-bootstrap/Nav"
 import './App.css';
+import { About } from "./pages/About";
 import Container from "react-bootstrap/Container";
 import { Nav, Navbar } from "react-bootstrap/esm";
 
