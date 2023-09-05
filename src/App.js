@@ -25,7 +25,7 @@ function App() {
         </Container>
       </Navbar>
       <Routes>
-        <Route path="/about" element={} />
+        <Route path="/about" element={ <About/> } />
       </Routes>
 
         </div>
