@@ -23,6 +23,9 @@ function App() {
             </Nav>
         </Container>
       </Navbar>
+      <Routes>
+        <Route path="/about" element={} />
+      </Routes>
 
         </div>
       );
