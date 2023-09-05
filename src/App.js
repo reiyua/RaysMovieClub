@@ -2,9 +2,7 @@ import { FirebaseConfig } from "./config/Config";
 import { initializeApp } from "firebase/app";
 import {Routes, Route} from "react-router-dom";
 
-import "react-bootstrap/Container"
-import "react-bootstrap/Navbar"
-import "react-bootstrap/Nav"
+import { Header } from "./components/Header";
 import './App.css';
 import { About } from "./pages/About";
 import { Home } from "./pages/Home";
