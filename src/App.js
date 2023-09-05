@@ -13,7 +13,18 @@ function App() {
   // navigation array
   const navItems = [
     { label: "Home", link: "/" },
+    { label: "About", link: "/about" },
+    { label: "Contact", link: "/contact" },
+    { label: "Create Account", link: "/signup" },
+    { label: "Log in", link: "/signin" },
   ]
+// navigation for authenticated user
+const AuthNavItems = [
+    { label: "Home", link: "/" },
+    { label: "About", link: "/about" },
+    { label: "Contact", link: "/contact" },
+    { label: "Log out", link: "/signout"}
+] 
 
   const saySomething = ( word ) => {
     alert( word )
