@@ -1,5 +1,6 @@
 import { FirebaseConfig } from "./config/Config";
 import { initializeApp } from "firebase/app";
+import {Routes, Route} from "react-router-dom";
 
 import "react-bootstrap/Container"
 import "react-bootstrap/Navbar"
@@ -22,7 +23,7 @@ function App() {
             </Nav>
         </Container>
       </Navbar>
-        <h1>React App</h1>
+
         </div>
       );
   }
