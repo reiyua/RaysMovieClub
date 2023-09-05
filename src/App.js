@@ -10,6 +10,11 @@ import { Contact } from "./pages/Contact"
 
 function App() {
   const FBapp = initializeApp(FirebaseConfig)
+  // navigation array
+  const navItems = [
+    { label: "Home", link: "/" },
+  ]
+
   const saySomething = ( word ) => {
     alert( word )
   }
@@ -19,7 +24,7 @@ function App() {
       <Routes>
         <Route path="/" element={ <Home greeting="Hey you're at home!" /> } />
         <Route path="/about" element={ <About greeting="Hey you, this is about page!" handler={saySomething} /> } />
-        <Route path="/contact" element={ <Contact /> } />
+        <Route path="/contact" element={ <Contact greeting="Hey you, this is contact page!" /> } />
       </Routes>
     </div>
   );
