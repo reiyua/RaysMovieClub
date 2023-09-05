@@ -29,7 +29,7 @@ const AuthNavItems = [
 ] 
 
 /// application states
-const [nav, setNav ] = useState( navItems )
+const [nav, setNav ] = useState( AuthNavItems )
 
 
   const saySomething = ( word ) => {
