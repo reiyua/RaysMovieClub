@@ -25,9 +25,8 @@ function App() {
         </Container>
       </Navbar>
       <Routes>
-        <Route path="/about" element={ <About/> } />
+        <Route path="/about" element={ <About greeting="Hey you, this is about page!" /> } />
       </Routes>
-
         </div>
       );
   }
