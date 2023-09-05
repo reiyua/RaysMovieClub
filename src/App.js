@@ -7,8 +7,10 @@ import "react-bootstrap/Navbar"
 import "react-bootstrap/Nav"
 import './App.css';
 import { About } from "./pages/About";
+import { Home } from "./pages/Home";
 import Container from "react-bootstrap/Container";
 import { Nav, Navbar } from "react-bootstrap/esm";
+
 
 function App() {
   const FBapp = initializeApp(FirebaseConfig);
@@ -25,6 +27,7 @@ function App() {
         </Container>
       </Navbar>
       <Routes>
+        <Route path="/" element={ <Home greeting="Hey you, this is home page!" /> } />
         <Route path="/about" element={ <About greeting="Hey you, this is about page!" /> } />
       </Routes>
         </div>
