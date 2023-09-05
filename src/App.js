@@ -27,7 +27,7 @@ function App() {
         </Container>
       </Navbar>
       <Routes>
-        <Route path="/" element={ <Home greeting="Hey you, this is home page!" /> } />
+        <Route path="/" element={ <Home greeting="Hey you, you're at home'!" /> } />
         <Route path="/about" element={ <About greeting="Hey you, this is about page!" /> } />
       </Routes>
         </div>
