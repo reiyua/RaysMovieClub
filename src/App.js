@@ -8,6 +8,7 @@ import "react-bootstrap/Nav"
 import './App.css';
 import { About } from "./pages/About";
 import { Home } from "./pages/Home";
+import { Contact } from "./pages/Contact";
 import Container from "react-bootstrap/Container";
 import { Nav, Navbar } from "react-bootstrap/esm";
 
