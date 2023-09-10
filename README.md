@@ -4,4 +4,4 @@ This GitHub repository is designed to store my classwork, that being a website h
 
 This website is used using React.js, Bootstrap, React Bootstrap, React-DOM, React-Router-DOM and PHP and uses databses as part of the website. 
 
-This website can be viewed at: https://rayyan-h-tafe-nsw.web.app/
+This website can be viewed at: https://rayyan-h-tafe-nsw.web.app/ & https://rayyan-h-tafe-nsw.firebaseapp.com/
