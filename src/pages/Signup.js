@@ -23,7 +23,7 @@ export function Signup ( props ) {
                     <Form.Label>Password</Form.Label>
                     <Form.Control type="password" name="password" placeholder='password'/>
                     </Form.Group>
-                    <Button variant="primary" type="submit">Sign up</Button>
+                    <Button variant="primary" className="mt-3 w-100" type="submit">Sign up</Button>
                 </Form>
                 </Col>
                 </Row>
