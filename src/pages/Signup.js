@@ -3,9 +3,12 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from "react-bootstrap/Button"
+import {useState, useEffect} from 'react';
 
 export function Signup ( props ) {
-   
+   const[username,setUsername] = useState('')
+   const[useremail,setUseremail] = useState('')
+    const[password,setPassword] = useState('')
     const submitHandler = (evt) => {
         evt.preventDefault()
     }
