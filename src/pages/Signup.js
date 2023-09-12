@@ -76,7 +76,12 @@ export function Signup ( props ) {
                     onChange={ (evt) => setUserpassword(evt.target.value) }
                     />
                     </Form.Group>
-                    <Button variant="primary" className="mt-3 w-100" type="submit">Sign up</Button>
+                    <Button
+                    variant="primary"
+                    className="mt-3 w-100"
+                    type="submit">Sign up
+                    disabled={ !(validemail && validpassword && validusername) ? false : true }
+                    </Button>
                 </Form>
                 </Col>
                 </Row>
