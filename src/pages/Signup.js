@@ -7,6 +7,7 @@ import {useState, useEffect} from 'react';
 
 export function Signup ( props ) {
    const[username,setUsername] = useState('')
+    const[validusername,setValidusername] = useState(false)
    const[useremail,setUseremail] = useState('')
     const[password,setPassword] = useState('')
     
