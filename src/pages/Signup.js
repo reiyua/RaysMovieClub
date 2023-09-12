@@ -35,13 +35,13 @@ export function Signup ( props ) {
      }, [useremail] )
 
      useEffect( () => {
-        if( setUserpassword.length >= 8 ) {
+        if( password.length >= 8 ) {
             setValidpassword(true)
         }
         else{
             setValidpassword(false)
         }
-    }, [setUserpassword] )
+    }, [password] )
 
     return (
        
@@ -79,8 +79,9 @@ export function Signup ( props ) {
                     <Button
                     variant="primary"
                     className="mt-3 w-100"
-                    type="submit">Sign up
-                    disabled={ !(validemail && validpassword && validusername) ? false : true }
+                    type="submit"
+                    disabled={ (validemail && validpassword && validusername) ? false : true }
+                    >Sign up
                     </Button>
                 </Form>
                 </Col>
