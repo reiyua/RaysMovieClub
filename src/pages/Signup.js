@@ -14,6 +14,7 @@ export function Signup ( props ) {
     const[validpassword,setValidpassword] = useState(false)
     const submitHandler = (evt) => {
         evt.preventDefault()
+        props.handler(useremail, password)
     }
 
     useEffect( () => {
