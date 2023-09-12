@@ -5,6 +5,12 @@ import Col from 'react-bootstrap/Col';
 import Button from "react-bootstrap/Button"
 
 export function Signup ( props ) {
+   
+    const submitHandler = (evt) => {
+        evt.preventDefault()
+    }
+
+
     return (
        
        <Container>
