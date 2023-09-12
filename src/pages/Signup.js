@@ -14,6 +14,12 @@ export function Signup ( props ) {
         evt.preventDefault()
     }
 
+    useEffect( () => {
+        if(username.length > 4) {
+           console.log("longer than 4 characters")
+        }
+        }
+        )
 
     return (
        
@@ -23,7 +29,12 @@ export function Signup ( props ) {
            <Form>
                 <Form.Group>
                     <Form.Label>Username</Form.Label>
-                    <Form.Control type="text" name="username" placeholder='username'/>
+                    <Form.Control
+                    type="text"
+                    name="username"
+                    placeholder='username'
+                    onChange={ (evt) => setUsername(evt.target.value) }
+                    />
                     </Form.Group>
                     <Form.Group>    
                     <Form.Label>Email</Form.Label>
