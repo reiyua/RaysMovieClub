@@ -9,8 +9,9 @@ export function Signup ( props ) {
    const[username,setUsername] = useState('')
     const[validusername,setValidusername] = useState(false)
    const[useremail,setUseremail] = useState('')
-    const[password,setPassword] = useState('')
-    
+   const[validemail,setValidemail] = useState(false)
+    const[password,setUserpassword] = useState('')
+    const[validpassword,setValidpassword] = useState(false)
     const submitHandler = (evt) => {
         evt.preventDefault()
     }
@@ -23,6 +24,24 @@ export function Signup ( props ) {
             setValidusername(false)
         }
      }, [username] )
+
+     useEffect( () => {
+        if(useremail.index0f('@') > 0 ) {
+            setValidemail(true)
+        }
+        else {
+            setValidemail(false)
+        }
+     }, [useremail] )
+
+     useEffect( () => {
+        if( setUserpassword.length >= 8 ) {
+            setValidpassword(true)
+        }
+        else{
+            setValidpassword(false)
+        }
+    }, [setUserpassword] )
 
     return (
        
