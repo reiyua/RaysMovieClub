@@ -18,8 +18,7 @@ export function Signup ( props ) {
         if(username.length > 4) {
            console.log("longer than 4 characters")
         }
-        }
-        )
+        }, [username] )
 
     return (
        
