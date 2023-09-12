@@ -26,7 +26,7 @@ export function Signup ( props ) {
      }, [username] )
 
      useEffect( () => {
-        if(useremail.index0f('@') > 0 ) {
+        if(useremail.indexOf('@') > 0 ) {
             setValidemail(true)
         }
         else {
