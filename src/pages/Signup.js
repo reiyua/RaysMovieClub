@@ -2,6 +2,7 @@ import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Button from "react-bootstrap/Button"
 
 export function Signup ( props ) {
     return (
@@ -22,6 +23,7 @@ export function Signup ( props ) {
                     <Form.Label>Password</Form.Label>
                     <Form.Control type="password" name="password" placeholder='password'/>
                     </Form.Group>
+                    <Button variant="primary" type="submit">Sign up</Button>
                 </Form>
                 </Col>
                 </Row>
