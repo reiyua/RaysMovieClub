@@ -2,6 +2,7 @@ import { FirebaseConfig } from "./config/Config"
 import { initializeApp } from "firebase/app"
 import { Routes, Route } from "react-router-dom"
 import { useState } from "react"
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
 import { Header } from "./components/Header"
 import './App.css'

@@ -9,7 +9,7 @@ export function Signup ( props ) {
        
        <Container>
         <Row>
-            <Col md={span: 4, offset:4}>
+            <Col md={{span: 4, offset:4}}>
            <Form>
                 <Form.Group>
                     <Form.Label>Username</Form.Label>
