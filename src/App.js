@@ -14,7 +14,7 @@ import { Signup } from "./pages/Signup"
 
 function App() {
   const FBapp = initializeApp(FirebaseConfig)
-  const FBauth = getAuth(FBapp)
+  const FBauth = getAuth()
   // navigation array
   const navItems = [
     { label: "Home", link: "/" },
@@ -42,11 +42,13 @@ function App() {
   // signing up a user
   const signUp = (email, password) => {
     createUserWithEmailAndPassword(FBauth, email, password)
-      .then((userCredential) => {
+      .then( (userCredential) => {
         // do something
       })
       .catch((error) => console.log(error.message))
     }
+
+
     return (
       <div className="App">
         <Header items={nav} />
@@ -54,7 +56,7 @@ function App() {
           <Route path="/" element={<Home greeting="Hey you're at home!" />} />
           <Route path="/about" element={<About greeting="Hey you, this is about page!" handler={saySomething} />} />
           <Route path="/contact" element={<Contact greeting="Hey you, this is contact page!" />} />
-          <Route path="/signup" element={<Signup handler={signUp}/>} />
+          <Route path="/signup" element={ <Signup handler={signUp}/> } />
         </Routes>
       </div>
     );

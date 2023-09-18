@@ -6,50 +6,51 @@ import Button from "react-bootstrap/Button"
 import {useState, useEffect} from 'react';
 
 export function Signup ( props ) {
-   const[username,setUsername] = useState('')
+    const[username,setUsername] = useState('')
     const[validusername,setValidusername] = useState(false)
-   const[useremail,setUseremail] = useState('')
-   const[validemail,setValidemail] = useState(false)
-    const[password,setUserpassword] = useState('')
+    const[useremail,setUseremail] = useState('')
+    const[validemail,setValidemail] = useState(false)
+    const[userpassword,setUserpassword] = useState('')
     const[validpassword,setValidpassword] = useState(false)
+  
     const submitHandler = (evt) => {
-        evt.preventDefault()
-        props.handler(useremail, password)
+      evt.preventDefault()
+      props.handler( useremail, userpassword )
     }
-
+  
     useEffect( () => {
-        if(username.length >= 4) {
-            setValidusername(true)
-        }
-        else {
-            setValidusername(false)
-        }
-     }, [username] )
-
-     useEffect( () => {
-        if(useremail.indexOf('@') > 0 ) {
-            setValidemail(true)
-        }
-        else {
-            setValidemail(false)
-        }
-     }, [useremail] )
-
-     useEffect( () => {
-        if( password.length >= 8 ) {
-            setValidpassword(true)
-        }
-        else{
-            setValidpassword(false)
-        }
-    }, [password] )
+      if( username.length >= 4 ) {
+        setValidusername(true)
+      }
+      else {
+        setValidusername(false)
+      }
+    }, [username] )
+  
+    useEffect( () => {
+      if( useremail.indexOf('@') > 0 ) {
+        setValidemail(true)
+      }
+      else {
+        setValidemail(false)
+      }
+    }, [useremail])
+  
+    useEffect( () => {
+      if( userpassword.length >= 8 ) {
+        setValidpassword(true)
+      }
+      else{
+        setValidpassword(false)
+      }
+    }, [userpassword])
 
     return (
        
        <Container>
         <Row>
             <Col md={{span: 4, offset:4}}>
-           <Form>
+           <Form onSubmit={submitHandler}>
                 <Form.Group>
                     <Form.Label>Username</Form.Label>
                     <Form.Control
