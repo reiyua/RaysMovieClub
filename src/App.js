@@ -2,7 +2,7 @@ import { FirebaseConfig } from "./config/Config"
 import { initializeApp } from "firebase/app"
 import { Routes, Route } from "react-router-dom"
 import { useState } from "react"
-import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged, signOut } from "firebase/auth";
 
 import { Header } from "./components/Header"
 import './App.css'
@@ -66,7 +66,11 @@ function App() {
       .catch((error) => console.log(error.message))
     }
 
-
+  const logOut = () => {
+    signOut(FBauth).then( () => {
+      // user is signed out
+  })
+}
     return (
       <div className="App">
         <Header items={nav} />
@@ -75,6 +79,7 @@ function App() {
           <Route path="/about" element={<About greeting="Hey you, this is about page!" handler={saySomething} />} />
           <Route path="/contact" element={<Contact greeting="Hey you, this is contact page!" />} />
           <Route path="/signup" element={ <Signup handler={signUp}/> } />
+          <Route path="/signout" element={ <Signout handler={logOut}/> } />
         </Routes>
       </div>
     );
