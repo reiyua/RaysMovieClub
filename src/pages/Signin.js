@@ -6,16 +6,36 @@ import Button from "react-bootstrap/Button"
 import {useState, useEffect} from 'react';
 
 export function Signin ( props ) {
+    const [email, setEmail] = useState('')
+    const [validemail, setValidemail] = useState(false)
+    const [password, setPassword] = useState('')
+    const [validpassword, setValidpassword] = useState(false)
+
+    useEffect( () => {
+        if(email.indexOf('@') > 0) {
+            setValidemail(true)
+        }
+        else {
+            setValidemail( false )
+        }
+    }, [email])
+
+    useEffect( () => {
+        if( password.length >= 8 ) {
+            setValidpassword(true)
+        }
+        else {
+            setValidpassword( false )
+        }
+    }, [password])
+    
     return (
         <Container>
         <Row>
           <Col md={ {span: 4, offset: 4} }>
-  
         <Form>
-  
-              <Form.Group>
-  
-                <Form.Label>Email</Form.Label>
+        <Form.Group>
+        <Form.Label>Email</Form.Label>
   
                 <Form.Control
   
