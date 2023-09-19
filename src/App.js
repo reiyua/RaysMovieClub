@@ -18,6 +18,7 @@ import { Signout } from "./pages/Signout"
 import { Signin } from "./pages/Signin"
 
 
+
 function App() {
   const FBapp = initializeApp(FirebaseConfig)
   const FBauth = getAuth()
@@ -41,6 +42,7 @@ function App() {
 
   /// application states
   const [nav, setNav] = useState(navItems)
+
 
    // authentication observer
    onAuthStateChanged(FBauth, (user) => {
@@ -93,7 +95,7 @@ const signIn = ( email, password ) => {
           <Route path="/contact" element={<Contact greeting="Hey you, this is contact page!" />} />
           <Route path="/signup" element={ <Signup handler={signUp}/> } />
           <Route path="/signout" element={ <Signout handler={logOut}/> } />
-          <Route path="/signin" element={ <Signin handler={signIn}/> } />
+          <Route path="/signin" element={ <Signin handler={signIn} authstate={auth}/> } />
         </Routes>
       </div>
     );
