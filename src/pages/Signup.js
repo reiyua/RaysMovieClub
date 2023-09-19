@@ -2,8 +2,9 @@ import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Button from "react-bootstrap/Button"
-import {useState, useEffect} from 'react';
+import Button from "react-bootstrap/Button";
+import {useState, useEffect, useContext} from 'react';
+import { AuthContext } from "../contexts/AuthContext";
 
 export function Signup ( props ) {
     const[username,setUsername] = useState('')
@@ -12,6 +13,8 @@ export function Signup ( props ) {
     const[validemail,setValidemail] = useState(false)
     const[userpassword,setUserpassword] = useState('')
     const[validpassword,setValidpassword] = useState(false)
+
+    const auth = useContext(AuthContext)
   
     const submitHandler = (evt) => {
       evt.preventDefault()
