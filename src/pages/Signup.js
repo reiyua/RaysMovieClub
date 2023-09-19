@@ -27,6 +27,7 @@ export function Signup ( props ) {
     useEffect( () => {
       if( auth ) {
         // go to home page
+        console.log(auth)
         navigate("/")
     }
   }, [auth])

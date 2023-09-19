@@ -92,7 +92,7 @@ const signIn = ( email, password ) => {
     return (
       <div className="App">
         <Header items={nav} />
-        <AuthContext.Provider>
+        <AuthContext.Provider value={auth}>
         <Routes>
           <Route path="/" element={<Home greeting="Hey you're at home!" />} />
           <Route path="/about" element={<About greeting="Hey you, this is about page!" handler={saySomething} />} />
