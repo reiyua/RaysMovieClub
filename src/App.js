@@ -2,7 +2,11 @@ import { FirebaseConfig } from "./config/Config"
 import { initializeApp } from "firebase/app"
 import { Routes, Route } from "react-router-dom"
 import { useState } from "react"
-import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged, signOut } from "firebase/auth";
+import { getAuth,
+  createUserWithEmailAndPassword,
+  onAuthStateChanged,
+  signOut,
+  signInWithEmailAndPassword } from "firebase/auth";
 
 import { Header } from "./components/Header"
 import './App.css'
@@ -11,6 +15,7 @@ import { Home } from "./pages/Home"
 import { Contact } from "./pages/Contact"
 import { Signup } from "./pages/Signup"
 import { Signout } from "./pages/Signout"
+import { Signin } from "./pages/Signin"
 
 
 function App() {
@@ -71,6 +76,14 @@ function App() {
       // user is signed out
   })
 }
+
+const signIn = ( email, password ) => {
+  signInWithEmailAndPassword(FBauth, email, password)
+    .then( () => {
+      // user is signed in
+} )
+.catch( (error) => { console.log(error) })
+}
     return (
       <div className="App">
         <Header items={nav} />
@@ -80,6 +93,7 @@ function App() {
           <Route path="/contact" element={<Contact greeting="Hey you, this is contact page!" />} />
           <Route path="/signup" element={ <Signup handler={signUp}/> } />
           <Route path="/signout" element={ <Signout handler={logOut}/> } />
+          <Route path="/signin" element={ <Signin handler={signIn}/> } />
         </Routes>
       </div>
     );
