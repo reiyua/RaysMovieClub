@@ -17,6 +17,9 @@ import { Signup } from "./pages/Signup"
 import { Signout } from "./pages/Signout"
 import { Signin } from "./pages/Signin"
 
+// contexts
+import { AuthContext } from "./contexts/AuthContext"
+
 
 
 function App() {
