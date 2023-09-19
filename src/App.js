@@ -2,7 +2,7 @@ import { FirebaseConfig } from "./config/Config"
 import { initializeApp } from "firebase/app"
 import { Routes, Route } from "react-router-dom"
 import { useState } from "react"
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
 
 import { Header } from "./components/Header"
 import './App.css'
@@ -15,6 +15,8 @@ import { Signup } from "./pages/Signup"
 function App() {
   const FBapp = initializeApp(FirebaseConfig)
   const FBauth = getAuth()
+  const [auth, setAuth] = useState(false)
+ 
   // navigation array
   const navItems = [
     { label: "Home", link: "/" },
@@ -33,6 +35,21 @@ function App() {
 
   /// application states
   const [nav, setNav] = useState(navItems)
+
+   // authentication observer
+   onAuthStateChanged(FBauth, (user) => {
+    if( user ) {
+      // currently authenticated
+      setAuth( user )
+      setNav( AuthnavItems )
+      
+    }
+    else {
+      // currently unauthenticated
+      setAuth( false )
+      setNav( navItems )
+    }
+  })
 
 
   const saySomething = (word) => {
