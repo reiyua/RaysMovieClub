@@ -5,6 +5,7 @@ import Col from 'react-bootstrap/Col';
 import Button from "react-bootstrap/Button";
 import {useState, useEffect, useContext} from 'react';
 import { AuthContext } from "../contexts/AuthContext";
+import {useNavigate} from 'react-router-dom';
 
 export function Signup ( props ) {
     const[username,setUsername] = useState('')
@@ -21,6 +22,14 @@ export function Signup ( props ) {
       props.handler( useremail, userpassword )
     }
   
+    const navigate = useNavigate()
+
+    useEffect( () => {
+      if( auth ) {
+        // go to home page
+        navigate("/")
+    }
+  }, [auth])
     useEffect( () => {
       if( username.length >= 4 ) {
         setValidusername(true)
@@ -93,4 +102,4 @@ export function Signup ( props ) {
                 </Row>
        </Container>
     )
-}
+  }
