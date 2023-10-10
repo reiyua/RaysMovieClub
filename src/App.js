@@ -7,6 +7,7 @@ import { getAuth,
   onAuthStateChanged,
   signOut,
   signInWithEmailAndPassword } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 
 import { Header } from "./components/Header"
 import './App.css'
@@ -25,6 +26,7 @@ import { AuthContext } from "./contexts/AuthContext"
 function App() {
   const FBapp = initializeApp(FirebaseConfig)
   const FBauth = getAuth()
+  const FBdb = getFirestore()
  
  
   // navigation array
