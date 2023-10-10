@@ -51,13 +51,17 @@ export function Signin( props ) {
       //console.log(code)
       // setErrorCode( code )
       switch(code) {
-        case"auth/invalid-email":
+        case "auth/invalid-email" :
           setErrorCode("The email address is invalid")
           break
-        case"auth/invalid-login-credentials":
+        case "auth/invalid-login-credentials" :
         setErrorCode("Credentials supplied is not in our system")
         break
-        default: 
+        case "auth/user-not-found" :
+          setErrorCode("Credentials supplied is not in our system")
+        break
+        break
+      default: 
         break
       }
     })
