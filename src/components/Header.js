@@ -1,7 +1,7 @@
 import Container from "react-bootstrap/Container"
 import Navbar from "react-bootstrap/Navbar"
 import Nav from "react-bootstrap/Nav"
-import { NavDropdown } from "react-bootstrap/NavDropdown"
+import NavDropdown from "react-bootstrap/NavDropdown"
 
 export function Header ( props ) {
     // props.items is the value of nav state in App.js
@@ -17,6 +17,9 @@ return (
           <Navbar.Brand>App</Navbar.Brand>
           <Nav>
             {Links}
+            <NavDropdown title="Account">
+            <NavDropdown.Item>Log out</NavDropdown.Item>
+            </NavDropdown>
             </Nav>
         </Container>
       </Navbar>)
