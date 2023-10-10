@@ -25,7 +25,7 @@ import { AuthContext } from "./contexts/AuthContext"
 function App() {
   const FBapp = initializeApp(FirebaseConfig)
   const FBauth = getAuth()
-  const [auth, setAuth] = useState(false)
+ 
  
   // navigation array
   const navItems = [
@@ -45,6 +45,7 @@ function App() {
 
   /// application states
   const [nav, setNav] = useState(navItems)
+  const [auth, setAuth] = useState(false)
 
 
    // authentication observer
