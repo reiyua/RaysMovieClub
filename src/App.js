@@ -40,7 +40,7 @@ function App() {
     { label: "Home", link: "/" },
     { label: "About", link: "/about" },
     { label: "Contact", link: "/contact" },
-    { label: "Log out", link: "/signout" }
+  
   ]
 
   /// application states
