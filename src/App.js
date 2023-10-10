@@ -98,7 +98,7 @@ const signIn = (email, password) => {
 }
     return (
       <div className="App">
-        <Header items={nav} />
+        <Header items={nav} user={auth} />
         <AuthContext.Provider value={auth}>
         <Routes>
           <Route path="/" element={<Home greeting="Hey you're at home!" />} />
