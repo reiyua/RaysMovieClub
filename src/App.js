@@ -83,6 +83,7 @@ function App() {
 }
 
 const signIn = ( email, password ) => {
+  
   signInWithEmailAndPassword(FBauth, email, password)
     .then( () => {
       // user is signed in
