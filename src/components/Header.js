@@ -15,9 +15,10 @@ export function Header(props) {
   const Account = (props) => {
     if (props.user) {
       return (
-        <NavDropdown title="Account">
-          <NavDropdown.Item href="/signout">Log out</NavDropdown.Item>
-        </NavDropdown>
+        <Account user={ props.user } />
+       // <NavDropdown title="Account">
+         // <NavDropdown.Item href="/signout">Log out</NavDropdown.Item>
+        // </NavDropdown>
       )
     }
     else {
