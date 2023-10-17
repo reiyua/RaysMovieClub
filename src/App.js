@@ -1,7 +1,7 @@
 import { FirebaseConfig } from "./config/Config"
 import { initializeApp } from "firebase/app"
 import { Routes, Route } from "react-router-dom"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { getAuth,
   createUserWithEmailAndPassword,
   onAuthStateChanged,
@@ -52,6 +52,15 @@ function App() {
   /// application states
   const [nav, setNav] = useState(navItems)
   const [auth, setAuth] = useState(false)
+  const [data, setData] = useState([])
+  const [ fetching , setFetching ] = useState( false )
+
+  useEffect( () => {
+    if( data.length === 0 ) {
+      readData()
+      setFetching( true )
+    }
+  }, [data])
 
 
    // authentication observer
@@ -106,12 +115,13 @@ const signIn = (email, password) => {
 // function to get data
 const readData = async () => {
   const querySnapshot = await getDocs( collection(FBdb, "books") )
-  let data = []
+  let listdata = []
   querySnapshot.forEach( (doc) => {
     let item = doc.data()
     item.id = doc.id
-    data.push( item )
+    listdata.push( item )
   })
+  setData( listdata )
 }
 
 
@@ -120,7 +130,7 @@ const readData = async () => {
         <Header items={nav} user={auth} />
         <AuthContext.Provider value={auth}>
         <Routes>
-          <Route path="/" element={<Home greeting="Hey you're at home!" />} />
+          <Route path="/" element={<Home items = {data} />} />
           <Route path="/about" element={<About greeting="Hey you, this is about page!" handler={saySomething} />} />
           <Route path="/contact" element={<Contact greeting="Hey you, this is contact page!" />} />
           <Route path="/signup" element={ <Signup handler={signUp}/> } />
