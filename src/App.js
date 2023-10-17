@@ -56,7 +56,7 @@ function App() {
   const [ fetching , setFetching ] = useState( false )
 
   useEffect( () => {
-    if( data.length === 0 ) {
+    if( data.length === 0 && fetching === false ) {
       readData()
       setFetching( true )
     }
