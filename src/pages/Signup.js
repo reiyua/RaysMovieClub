@@ -30,7 +30,7 @@ export function Signup ( props ) {
         console.log(auth)
         navigate("/")
     }
-  }, [auth])
+  }, [auth,])
     useEffect( () => {
       if( username.length >= 4 ) {
         setValidusername(true)

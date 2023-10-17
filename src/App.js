@@ -7,7 +7,11 @@ import { getAuth,
   onAuthStateChanged,
   signOut,
   signInWithEmailAndPassword } from "firebase/auth";
-import { getFirestore } from "firebase/firestore";
+import { getFirestore,
+   collection,
+    query,
+     where,
+      getDocs } from "firebase/firestore";
 
 import { Header } from "./components/Header"
 import './App.css'
@@ -25,8 +29,8 @@ import { AuthContext } from "./contexts/AuthContext"
 
 function App() {
   const FBapp = initializeApp(FirebaseConfig)
-  const FBauth = getAuth()
-  const FBdb = getFirestore()
+  const FBauth = getAuth(FBapp)
+  const FBdb = getFirestore(FBapp)
  
  
   // navigation array
@@ -98,6 +102,19 @@ const signIn = (email, password) => {
       })
   })
 }
+
+// function to get data
+const readData = async () => {
+  const querySnapshot = await getDocs( collection(FBdb, "books") )
+  let data = []
+  querySnapshot.forEach( (doc) => {
+    let item = doc.data()
+    item.id = doc.id
+    data.push( item )
+  })
+}
+
+
     return (
       <div className="App">
         <Header items={nav} user={auth} />
