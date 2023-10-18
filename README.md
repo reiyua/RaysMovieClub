@@ -1,4 +1,4 @@
-# TAFENSWDiplomaGenITWebsite
+# RaysBookClub
 
 This GitHub repository is designed to store my learning classwork, that being a website hosted on Google Firebase to help me learn React.js and it's derivatives for an upcoming assessment at TAFE NSW as part of my Diploma in General I.T.
 
