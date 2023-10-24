@@ -12,6 +12,7 @@ import { getFirestore,
     query,
      where,
       getDocs } from "firebase/firestore";
+      import {getStorage} from "firebase/storage"
 
 import { Header } from "./components/Header"
 import './App.css'
@@ -24,6 +25,7 @@ import { Signin } from "./pages/Signin"
 
 // contexts
 import { AuthContext } from "./contexts/AuthContext"
+import { StorageContext } from "./contexts/StorageContext";
 
 
 
@@ -31,6 +33,7 @@ function App() {
   const FBapp = initializeApp(FirebaseConfig)
   const FBauth = getAuth(FBapp)
   const FBdb = getFirestore(FBapp)
+  const FBstorage = getStorage(FBapp)
  
  
   // navigation array
@@ -129,6 +132,7 @@ const readData = async () => {
       <div className="App">
         <Header items={nav} user={auth} />
         <AuthContext.Provider value={auth}>
+        <StorageContext.Provider value={FBstorage}>
         <Routes>
           <Route path="/" element={<Home items = {data} />} />
           <Route path="/about" element={<About greeting="Hey you, this is about page!" handler={saySomething} />} />
@@ -137,6 +141,7 @@ const readData = async () => {
           <Route path="/signout" element={ <Signout handler={logOut}/> } />
           <Route path="/signin" element={ <Signin handler={signIn} authstate={auth}/> } />
         </Routes>
+        </StorageContext.Provider>
         </AuthContext.Provider>
       </div>
     );
