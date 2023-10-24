@@ -3,10 +3,13 @@ import Col from 'react-bootstrap/Col';
 import Container from "react-bootstrap/Container";
 import Card from "react-bootstrap/Card";
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useContext } from "react"
+import { StorageContext } from '../contexts/StorageContext';
 
 export function Home ( props ) {
     const [ books, setBooks ] = useState([])
+
+    const Storage = useContext( StorageContext )
 
     useEffect( () => {
     setBooks( props.items )
