@@ -125,6 +125,7 @@ const readData = async () => {
     listdata.push( item )
   })
   setData( listdata )
+ 
 }
 
 
