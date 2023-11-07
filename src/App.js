@@ -30,7 +30,7 @@ import { StorageContext } from "./contexts/StorageContext";
 
 
 function App() {
-  const FBapp = initializeApp(FirebaseConfig)
+  const FBapp = initializeApp(firebaseConfig)
   const FBauth = getAuth(FBapp)
   const FBdb = getFirestore(FBapp)
   const FBstorage = getStorage(FBapp)
