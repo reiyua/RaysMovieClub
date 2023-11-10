@@ -35,6 +35,7 @@ function App() {
   const FBdb = getFirestore(FBapp)
   const FBstorage = getStorage(FBapp)
  
+  
  
   // navigation array
   const navItems = [
