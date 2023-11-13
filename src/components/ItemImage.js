@@ -10,7 +10,7 @@ export function ItemImage ( props ) {
 
   useEffect( () => {
     if( props.source ) {
-      const imgref = ref( storage, `book_covers/${props.source}`)
+      const imgref = ref( storage, `movie_covers/${props.source}`)
       getDownloadURL( imgref )
       .then( (url) => setImage(url) )
       .catch( err => console.log(err) )

@@ -8,22 +8,22 @@ import { useState, useEffect, useContext } from "react"
 import { ItemImage } from "../components/ItemImage"
 
 export function Home(props) {
-    const [books,setBooks] = useState([])
+    const [movies,setMovies] = useState([])
 
     useEffect(() => {
       console.log( props.items )
-      setBooks( props.items )
+      setMovies( props.items )
     }, [props.items])
   
   
   
-    const ItemCards = books.map( ( book, itemkey ) => {
+    const ItemCards = movies.map( ( movie, itemkey ) => {
       return(
         <Col md={4}>
           <Card key={itemkey}>
-            <ItemImage source={ book.cover_image} />
+            <ItemImage source={ movie.cover_image} />
             <Card.Body>
-              <Card.Title>{ book.title }</Card.Title>
+              <Card.Title>{ movie.title }</Card.Title>
             </Card.Body>
           </Card>
         </Col>
