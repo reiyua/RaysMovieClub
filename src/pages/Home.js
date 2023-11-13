@@ -23,7 +23,7 @@ export function Home(props) {
           <Card key={itemkey}>
             <ItemImage source={ book.cover_image} />
             <Card.Body>
-              <Card.Title>{ book.book_title }</Card.Title>
+              <Card.Title>{ book.title }</Card.Title>
             </Card.Body>
           </Card>
         </Col>
