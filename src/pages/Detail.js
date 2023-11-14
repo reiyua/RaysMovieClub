@@ -8,7 +8,7 @@ import { ItemImage } from '../components/ItemImage';
 import Button from 'react-bootstrap/Button';
 
 export function Detail(props) {
-    const [movieData, setBookData] = useState()
+    const [movieData, setMovieData] = useState()
 
     let { id } = useParams();
 
