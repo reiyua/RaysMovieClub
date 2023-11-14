@@ -33,12 +33,13 @@ export function Detail(props) {
                     <Col md={6}>
                         <h2>More information</h2>
                         <h3>Summary</h3>
-                        <p>{movieData.summary}</p>
-                        <h3>Author</h3>
-                        <p>{movieData.author}</p>
-                        <h3>ISBN</h3>
-                        <p>ISBN10: {movieData.isbn10}</p>
-                        <p>ISBN13: {movieData.isbn13}</p>
+                        <p>{movieData.synopsis}</p>
+                        <h3>People Who Contributed:</h3>
+                        <p>{movieData.director}</p>
+                        <p>{movieData.main_actors}</p>
+                        <p>{movieData.producer}</p>
+                        <h3>Further Information</h3>
+                        <p>IMDB: {movieData.imdb_link}</p>
                         <Form>
                             <h3>Review this movie</h3>
                             <Form.Group>
