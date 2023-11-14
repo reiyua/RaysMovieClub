@@ -29,7 +29,7 @@ export function ItemImage ( props ) {
   }
   else {
     return (
-      <Card.Img variant='top' src={image} />
+      <Card.Img style={{aspectRatio: "3/4"}} variant='top' src={image} />
     )
   }
 }
