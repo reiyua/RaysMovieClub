@@ -31,7 +31,6 @@ export function Home(props) {
               <Card.Text>
                 Genre: {movie.genre}
               </Card.Text>
-
             </Card.Body>
           </Card>
         </Col>
