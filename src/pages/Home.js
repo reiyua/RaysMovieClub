@@ -25,7 +25,10 @@ export function Home(props) {
             <ItemImage source={ movie.cover_image} />
             <Card.Body>
               <Card.Title>{ movie.movie_title }</Card.Title>
-              <Card.Title>{ movie.title }</Card.Title>
+              <Card.Text>
+               Main Cast: {movie.main_actors}
+              </Card.Text>
+
             </Card.Body>
           </Card>
         </Col>
