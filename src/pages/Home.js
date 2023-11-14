@@ -28,6 +28,9 @@ export function Home(props) {
               <Card.Text>
                Main Cast: {movie.main_actors}
               </Card.Text>
+              <Card.Text>
+                Genre: {movie.genre}
+              </Card.Text>
 
             </Card.Body>
           </Card>
