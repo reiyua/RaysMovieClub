@@ -18,7 +18,7 @@ export function Home(props) {
     const ItemCards = movies.map( ( movie, itemkey ) => {
       const itemLink = `/detail/${movie.id}`
       return(
-        <Col md={4} className="mb-4">
+        <Col md={4} className="mb-4" key={itemkey}>
           <Card key={itemkey} className="position-relative">
             <a href={itemLink} className="position-absolute" style={{top:0, left:0, right:0, bottom:0}}>
             </a>
