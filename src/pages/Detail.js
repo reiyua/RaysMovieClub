@@ -59,11 +59,11 @@ export function Detail(props) {
                             </Form.Group>
                             <Form.Group>
                                 <Form.Label>Title</Form.Label>
-                                <Form.Control type="text" placeholder="I love this movie" />
+                                <Form.Control type="text" placeholder="Best movie in ages!" />
                             </Form.Group>
                             <Form.Group>
                                 <Form.Label>Review</Form.Label>
-                                <Form.Control as="textarea" rows={4} cols={30} placeholder="I could not stop watching!" />
+                                <Form.Control as="textarea" rows={4} cols={30} placeholder="This movie had me hooked!" />
                             </Form.Group>
                             <Button type="submit" variant="primary">Submit</Button>
                         </Form>
