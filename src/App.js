@@ -9,8 +9,8 @@ import { getAuth,
   signInWithEmailAndPassword } from "firebase/auth";
 import { getFirestore,
    collection,
-    query,
-     where,
+    getDoc,
+     doc,
       getDocs } from "firebase/firestore";
       import {getStorage} from "firebase/storage"
 
@@ -130,6 +130,15 @@ const readData = async () => {
  
 }
 
+  // function to get a single item
+  const getDocument = async ( itemId) => {
+    const docRef = doc( FBdb, "movies", itemId )
+    const docSnap = await getDoc( docRef )
+    let movie = docSnap.data()
+    movie.id = itemId
+    return movie
+  }
+
 
     return (
       <div className="App">
@@ -143,7 +152,7 @@ const readData = async () => {
           <Route path="/signup" element={ <Signup handler={signUp}/> } />
           <Route path="/signout" element={ <Signout handler={logOut}/> } />
           <Route path="/signin" element={ <Signin handler={signIn} authstate={auth}/> } />
-          <Route path="/detail/:id" element={<Detail/>} />
+          <Route path="/detail/:id" element={<Detail handler={getDocument} />} />
         </Routes>
         </StorageContext.Provider>
         </AuthContext.Provider>

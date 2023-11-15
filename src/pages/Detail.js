@@ -10,24 +10,20 @@ import Button from 'react-bootstrap/Button';
 export function Detail(props) {
     const [movieData, setMovieData] = useState()
 
-    let { id } = useParams();
+    let { id } = useParams()
 
     useEffect(() => {
-        if (!movieData && typeof props.handler === 'function') {
-            const fetchMovieData = async () => {
-                const movieData = await props.handler(id);
-                setMovieData(movieData);
-            };
-            fetchMovieData();
+        if (!movieData) {
+            props.handler(id).then((movie) => setMovieData(movie))
         }
-    }, [id, movieData, props.handler]);
+    }, [id])
 
     if (movieData) {
         return (
             <Container>
                 <Row>
                     <Col>
-                        <h1>{movieData.movie_title}</h1>
+                        <h1>{movieData.title}</h1>
                     </Col>
                 </Row>
                 <Row>
@@ -35,19 +31,23 @@ export function Detail(props) {
                         <ItemImage source={movieData.cover_image} />
                     </Col>
                     <Col md={6}>
-                        <h2>More information</h2>
-                        <h3>Summary</h3>
+                        <h2>More Information</h2>
+                        <h3>Synopsis</h3>
                         <p>{movieData.synopsis}</p>
-                        <h3>People Who Contributed:</h3>
-                        <p>{movieData.director}</p>
+                        <h3>Main Actors</h3>
                         <p>{movieData.main_actors}</p>
+                        <h3>Director</h3>
+                        <p>{movieData.director}</p>
+                        <h3>Producer</h3>
                         <p>{movieData.producer}</p>
-                        <h3>Further Information</h3>
-                        <p>IMDB: {movieData.imdb_link}</p>
+                        <h3>Genre</h3>
+                        <p>{movieData.genre}</p>
+                        <h3>IMDB Link</h3>
+                        <p>{movieData.imdb_link}</p>
                         <Form>
                             <h3>Review this movie</h3>
                             <Form.Group>
-                                <Form.Label>Star</Form.Label>
+                                <Form.Label>Star Rating</Form.Label>
                                 <Form.Select>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
@@ -57,12 +57,12 @@ export function Detail(props) {
                                 </Form.Select>
                             </Form.Group>
                             <Form.Group>
-                               <Form.Label>Title</Form.Label> 
-                               <Form.Control type="text" placeholder="I love this movie!" />
+                                <Form.Label>Title</Form.Label>
+                                <Form.Control type="text" placeholder="I love this movie" />
                             </Form.Group>
                             <Form.Group>
                                 <Form.Label>Review</Form.Label>
-                                <Form.Control as="textarea" rows={3} cols={30} placeholder="I was hooked watching this movie!" />
+                                <Form.Control as="textarea" rows={4} cols={30} placeholder="I could not stop watching!" />
                             </Form.Group>
                             <Button type="submit" variant="primary">Submit</Button>
                         </Form>
@@ -75,7 +75,7 @@ export function Detail(props) {
         )
     }
     else {
-        return null
+        return null;
+        
+        }
     }
-
-}
