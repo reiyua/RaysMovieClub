@@ -13,10 +13,14 @@ export function Detail(props) {
     let { id } = useParams();
 
     useEffect(() => {
-        if (!movieData) {
-            props.handler(id).then((movie) => setMovieData(movie))
+        if (!movieData && typeof props.handler === 'function') {
+            const fetchMovieData = async () => {
+                const movieData = await props.handler(id);
+                setMovieData(movieData);
+            };
+            fetchMovieData();
         }
-    }, [id]);
+    }, [id, movieData, props.handler]);
 
     if (movieData) {
         return (
