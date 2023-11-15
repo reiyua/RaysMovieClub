@@ -34,11 +34,12 @@ export function Detail(props) {
                         <h2>More Information</h2>
                         <h3>Synopsis</h3>
                         <p>{movieData.synopsis}</p>
+                        <h2>Key People</h2>
                         <h3>Main Actors</h3>
                         <p>{movieData.main_actors}</p>
                         <h3>Director</h3>
                         <p>{movieData.director}</p>
-                        <h3>Producer</h3>
+                        <h3>Producers</h3>
                         <p>{movieData.producer}</p>
                         <h3>Genre</h3>
                         <p>{movieData.genre}</p>
