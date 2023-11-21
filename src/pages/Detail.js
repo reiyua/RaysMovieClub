@@ -45,32 +45,6 @@ export function Detail(props) {
                         <p>{movieData.genre}</p>
                         <h3>IMDB Link</h3>
                         <p>{movieData.imdb_link}</p>
-                        <Form>
-                            <h3>Review this movie</h3>
-                            <Form.Group>
-                                <Form.Label>Star Rating</Form.Label>
-                                <Form.Select>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </Form.Select>
-                            </Form.Group>
-                            <Form.Group>
-                                <Form.Label>Title</Form.Label>
-                                <Form.Control type="text" placeholder="Best movie in ages!" />
-                            </Form.Group>
-                            <Form.Group>
-                                <Form.Label>Review</Form.Label>
-                                <Form.Control as="textarea" rows={4} cols={30} placeholder="This movie had me hooked!" />
-                            </Form.Group>
-                            <Button type="submit" variant="primary">Submit</Button>
-                            <Form.Group>
-                            <h3>Existing reviews of this book</h3>
-                            <p>To be added</p>
-                            </Form.Group>
-                        </Form>
                     </Col>
                 </Row>
                 <Row>
