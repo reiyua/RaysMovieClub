@@ -27,10 +27,10 @@ export function Detail(props) {
                     </Col>
                 </Row>
                 <Row>
-                    <Col md={6}>
+                    <Col md={4}>
                         <ItemImage source={movieData.cover_image} />
                     </Col>
-                    <Col md={6}>
+                    <Col md={8}>
                         <h2>More Information</h2>
                         <h3>Synopsis</h3>
                         <p>{movieData.synopsis}</p>
@@ -55,6 +55,6 @@ export function Detail(props) {
     }
     else {
         return null;
-        
-        }
+
     }
+}
