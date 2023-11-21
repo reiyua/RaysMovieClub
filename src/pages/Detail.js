@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { ItemImage } from '../components/ItemImage';
 import Button from 'react-bootstrap/Button';
+import { ReviewForm } from '../components/ReviewForm';
 
 export function Detail(props) {
     const [movieData, setMovieData] = useState()
@@ -48,7 +49,10 @@ export function Detail(props) {
                     </Col>
                 </Row>
                 <Row>
-                    <Col></Col>
+                    <Col>
+                        <h2>Reviews</h2>
+                        <ReviewForm />
+                    </Col>
                 </Row>
             </Container>
         )
