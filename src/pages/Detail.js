@@ -50,7 +50,6 @@ export function Detail(props) {
                 </Row>
                 <Row>
                     <Col>
-                        <h2>Reviews</h2>
                         <ReviewForm />
                     </Col>
                 </Row>
