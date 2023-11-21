@@ -2,24 +2,31 @@ import Form from "react-bootstrap/Form"
 import Button from "react-bootstrap/Button"
 
 import { AuthContext } from "../contexts/AuthContext"
-import { useContext } from "react"
+import { useContext, useState } from "react"
 
+const submitHandler = (event) => {
+event.preventDefault()
+}
 
 export function ReviewForm(props) {
   const auth = useContext(AuthContext)
+  const[star, setStar ] = useState()
+  const[title, setTitle ] = useState()
+  const[review, setReview ] = useState()
   if (auth) {
     return (
-      <Form>
-        <h3>Review this movie</h3>
+      <Form onSubmit={submitHandler}>
+        <h3>Review {props.movietitle}</h3>
         <Form.Group>
           <Form.Label>Star</Form.Label>
-          <Form.Select>
+          <Form.Select name="star" value={star} onChange={(evt) => setStar(evt.target.value) }>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
             <option value="5">5</option>
           </Form.Select>
+          <Form.Text>You have given {star} star(s)</Form.Text>
         </Form.Group>
         <Form.Group>
           <Form.Label>Title</Form.Label>

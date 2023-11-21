@@ -24,7 +24,7 @@ export function Detail(props) {
             <Container>
                 <Row>
                     <Col>
-                        <h1>{movieData.title}</h1>
+                        <h1>{movieData.movie_title}</h1>
                     </Col>
                 </Row>
                 <Row>
@@ -50,7 +50,7 @@ export function Detail(props) {
                 </Row>
                 <Row>
                     <Col>
-                        <ReviewForm />
+                        <ReviewForm movietitle={movieData.movie_title} />
                     </Col>
                 </Row>
             </Container>
