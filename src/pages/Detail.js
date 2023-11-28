@@ -7,7 +7,7 @@ import { useParams } from 'react-router-dom';
 import { ItemImage } from '../components/ItemImage';
 import Button from 'react-bootstrap/Button';
 import { ReviewForm } from '../components/ReviewForm';
-
+import { Reviews } from '../components/Reviews';
 export function Detail(props) {
     const [movieData, setMovieData] = useState()
 
@@ -52,6 +52,9 @@ export function Detail(props) {
                     <Col>
                         <ReviewForm movietitle={movieData.movie_title} movieId={movieData.id} />
                     </Col>
+                </Row>
+                <Row>
+                    <Reviews movieId={movieData.id} />
                 </Row>
             </Container>
         )
