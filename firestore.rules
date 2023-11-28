@@ -16,7 +16,7 @@ service cloud.firestore {
       //allow read, write: if request.time < timestamp.date(2023, 12, 7);
    // }
     match /movies/{document=**} {
-    allow read: if true;
+    allow read, write: if true;
     }
   }
 }
