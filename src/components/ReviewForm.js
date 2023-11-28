@@ -6,13 +6,7 @@ import { FSContext } from "../contexts/FSContext"
 import { useContext, useState, useEffect } from "react"
 import { collection, addDoc } from "firebase/firestore"; 
 
-const submitHandler = async (event) => {
-event.preventDefault()
-const userReview = {title: title, star: star, body: review }
-const col = collection(db, `movies/${props.movieId}/reviews`)
-const ref = await addDoc(col, userReview )
-console.log( ref )
-}
+
 
 export function ReviewForm(props) {
   const auth = useContext(AuthContext)
@@ -31,6 +25,14 @@ export function ReviewForm(props) {
         setValid( false )
     }
   }, [star, title, review])
+  
+  const submitHandler = async (event) => {
+    event.preventDefault()
+    const userReview = {title: title, star: star, body: review }
+    const col = collection(db, `movies/${props.movieId}/reviews`)
+    const ref = await addDoc(col, userReview )
+    console.log( ref )
+    }
 
   if (auth) {
     return (
