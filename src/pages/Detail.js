@@ -50,7 +50,7 @@ export function Detail(props) {
                 </Row>
                 <Row>
                     <Col>
-                        <ReviewForm movietitle={movieData.movie_title} />
+                        <ReviewForm movietitle={movieData.movie_title} movieId={movieData.movieId} />
                     </Col>
                 </Row>
             </Container>
