@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/RaysMovieClub/static/css/main.6ccd65a8.css",
+    "main.js": "/RaysMovieClub/static/js/main.2d211968.js",
+    "static/js/787.fe1675bb.chunk.js": "/RaysMovieClub/static/js/787.fe1675bb.chunk.js",
+    "index.html": "/RaysMovieClub/index.html",
+    "main.6ccd65a8.css.map": "/RaysMovieClub/static/css/main.6ccd65a8.css.map",
+    "main.2d211968.js.map": "/RaysMovieClub/static/js/main.2d211968.js.map",
+    "787.fe1675bb.chunk.js.map": "/RaysMovieClub/static/js/787.fe1675bb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6ccd65a8.css",
+    "static/js/main.2d211968.js"
+  ]
+}
