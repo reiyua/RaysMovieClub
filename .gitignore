@@ -24,3 +24,6 @@ yarn-error.log*
 
 # Google Firebase Hosting Cache file
 .firebase/hosting.YnVpbGQ.cache
+
+# Local Netlify folder
+.netlify

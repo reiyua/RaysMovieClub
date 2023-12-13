@@ -8,9 +8,10 @@ This site is now complete and has been archived, this will no longer be maintain
 
 There is no search component even though the website documentation specifies it as a requirement as it is incompatible with the website setup.
 
-This website can be viewed through two services: 
+This website can be viewed through these services: 
 
 Google Firebase Hosting: https://rayyan-h-tafe-nsw-2.web.app/ & https://rayyan-h-tafe-nsw-2.firebaseapp.com/
 
-GitHub Pages: https://reiyua.github.io/RaysMovieClub/
+GitHub Pages (Seem's to not work due to not supporting React Router): https://reiyua.github.io/RaysMovieClub/
 
+Netlify (Seem's to not actually load anything): https://peppy-mochi-f9d893.netlify.app/
