@@ -14,4 +14,4 @@ Google Firebase Hosting: https://rayyan-h-tafe-nsw-2.web.app/ & https://rayyan-h
 
 GitHub Pages (Seem's to not work due to not supporting React Router): https://reiyua.github.io/RaysMovieClub/
 
-Netlify (Seem's to not actually load anything): https://raysmovieclub.netlify.app/
+
