@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/c2363c99-603b-4d9b-be2e-76e6e416af24/resourceGroups/ReactWebsites/providers/Microsoft.Web/sites/raysmovieclub",
+    "appService.deploySubpath": "build"
+}
