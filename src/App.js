@@ -1,6 +1,3 @@
-import { Client } from 'appwrite';
-
-// Google Firebase Plugins to add
 import { firebaseConfig } from "./config/FirebaseConfig"
 import { initializeApp } from "firebase/app"
 import { getAuth,
