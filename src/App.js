@@ -1,8 +1,8 @@
 import { Client } from 'appwrite';
+
+// Google Firebase Plugins to add
 import { firebaseConfig } from "./config/FirebaseConfig"
 import { initializeApp } from "firebase/app"
-import { Routes, Route } from "react-router-dom"
-import { useState, useEffect } from "react"
 import { getAuth,
   createUserWithEmailAndPassword,
   onAuthStateChanged,
@@ -24,6 +24,9 @@ import { Signup } from "./pages/Signup"
 import { Signout } from "./pages/Signout"
 import { Signin } from "./pages/Signin"
 import { Detail } from "./pages/Detail";
+
+import { Routes, Route } from "react-router-dom"
+import { useState, useEffect } from "react"
 
 // contexts
 import { AuthContext } from "./contexts/AuthContext"
