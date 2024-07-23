@@ -1,4 +1,5 @@
-import { firebaseConfig } from "./config/Config"
+import { Client } from 'appwrite';
+import { firebaseConfig } from "./config/FirebaseConfig"
 import { initializeApp } from "firebase/app"
 import { Routes, Route } from "react-router-dom"
 import { useState, useEffect } from "react"
