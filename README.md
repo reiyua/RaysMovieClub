@@ -1,7 +1,10 @@
 # RaysMovieClub
 
-# ATTENTION: Due to Google Firebase removing access to the Cloud Storage access for non-paying users on October 1 2025, this site will no longer function as it can no longer call images for the movie listings.
-# NO FURTHER SUPPORT is being provided anymore for this project. 
+# ATTENTION: Due to Google Cloud suspending the project associated with the Google Firebase Instance for the second time for the exact same reason of "phishing" and blatantly ignoring my email detailing the use case of the site, the linked site is no longer active.
+If you wish to visit a working version of this, visit https://github.com/reiyua/RaysBookClub - the only thing missing is the commenting feature.
+
+## Due to Google Firebase removing access to the Cloud Storage access for non-paying users on October 1 2025, this site will no longer function as it can no longer call images for the movie listings.
+## NO FURTHER SUPPORT is being provided anymore for this project. 
 
 This GitHub repository is designed to store my Advanced Web assignment, a website hosted on Google Firebase containing React.js and its derivatives as part of my Diploma in General I.T at TAFE NSW
 
