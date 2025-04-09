@@ -1,5 +1,22 @@
 # RaysMovieClub
 
+# Google has decided to disable the site for supposed phishing, when its a fucking fictional movie club site, what fucking brand am I impersonating??? This is for an academic post...
+
+# To date, Google has blocked my project a total of THREE times... I understand the first time you think it's phishing, and you were satisfied with the evidence I provided that this was for academic purposes, but you proceed to pull down my project AGAIN and AGAIN for the exact same goddamn reason.
+
+# Here is evidence of each email:
+Email 1 (21/07/2024):
+![image](https://github.com/user-attachments/assets/e7c1dbb3-a6fe-4f51-a639-880661de9c2c)
+Email 2 (10/01/2025):
+![image](https://github.com/user-attachments/assets/3c224917-2702-4803-a1d8-e924c8d91f3f)
+Email 3, 4 and 5 IN A ROW (08/04/2025) (GOD they are clingy):
+![image](https://github.com/user-attachments/assets/7f065c7e-2927-423f-9623-00321b0cd5ae)
+Email 6, 7 and 8:
+![image](https://github.com/user-attachments/assets/f2eac8d4-debf-4cb8-aa56-c34600c923a7)
+
+# I do NOT care about this project any longer, Google Firebase customer support team SUCK.
+
+
 ## Due to Google Firebase removing access to the Cloud Storage access for non-paying users on October 1 2025, this site will no longer function as it can no longer call images for the movie listings.
 ## NO FURTHER SUPPORT is being provided anymore for this project. 
 
